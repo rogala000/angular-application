@@ -1,0 +1,74 @@
+{
+  "campaign": [
+    {
+      "name": "Campaign1",
+      "keywords": "keyword",
+      "bidAmount": 1000000,
+      "fund": 12332,
+      "status": "On",
+      "town": "Town 1",
+      "radius": 5,
+      "id": 1
+    },
+    {
+      "name": "Campaign2",
+      "keywords": "keyword2",
+      "bidAmount": 10000,
+      "fund": 1332,
+      "status": "Off",
+      "town": "Town 2",
+      "radius": 23,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Campaign3",
+      "keywords": "keyword3",
+      "bidAmount": 231,
+      "fund": 324,
+      "status": "off",
+      "town": "sdfdsf",
+      "radius": 234
+    },
+    {
+      "name": "123233",
+      "keywords": "213",
+      "bidAmount": "213",
+      "fund": "123",
+      "status": "Off",
+      "town": "Town 1",
+      "radius": "123",
+      "id": 4
+    },
+    {
+      "name": "ewrtyu324234",
+      "keywords": "3456",
+      "bidAmount": "34567",
+      "fund": "3456",
+      "status": "on",
+      "town": "2344",
+      "radius": "23344",
+      "id": 5
+    },
+    {
+      "name": "213",
+      "keywords": "Keyword 1",
+      "bidAmount": "453",
+      "fund": 333,
+      "status": "Off",
+      "town": "Town 2",
+      "radius": "545",
+      "id": 6
+    },
+    {
+      "name": "expensive campaign",
+      "keywords": "Keyword 2",
+      "bidAmount": 213,
+      "fund": 900000,
+      "status": "On",
+      "town": "Town 1",
+      "radius": 3345,
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<div class="example-container mat-elevation-z8">
+
+    <div class="example-loading-shade"
+         *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+
+    <div class="button-row">
+      <a mat-flat-button color="primary" [routerLink]="['/campaigns']"><mat-icon>list</mat-icon></a>
+    </div>
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title><h2>{{campaign.name}}</h2></mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <dl>
+          <dt><b>Campaign name:</b></dt>
+          <dd>{{campaign.name}}</dd>
+          <dt><b>Keywords:</b></dt>
+          <dd>{{campaign.keywords}}</dd>
+          <dt><b>Bid amount:</b></dt>
+          <dd>{{campaign.bidAmount}}</dd>
+          <dt><b>Fund:</b></dt>
+          <dd>{{campaign.fund}}</dd>
+          <dt><b>Status:</b></dt>
+          <dd>{{campaign.status}}</dd>
+          <dt><b>Town:</b></dt>
+          <dd>{{campaign.town}}</dd>
+          <dt><b>Radius</b></dt>
+          <dd>{{campaign.radius}}</dd>
+        </dl>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <a mat-flat-button color="primary" [routerLink]="['/campaigns-edit', campaign.id]"><mat-icon>edit</mat-icon></a>
+        <a mat-flat-button color="warn" (click)="deleteCampaign(campaign.id)"><mat-icon>delete</mat-icon></a>
+      </mat-card-actions>
+
+    </mat-card>
+  </div>

@@ -1,0 +1,67 @@
+<div class="example-container mat-elevation-z8">
+
+    <div class="example-loading-shade"
+         *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+
+    <div class="button-row">
+      <a mat-flat-button color="primary" [routerLink]="['/campaigns']"><mat-icon>list</mat-icon></a>
+    </div>
+
+    <mat-card class="example-card">
+      <form [formGroup]="campaignForm" (ngSubmit)="onFormSubmit(campaignForm.value)">
+          Name:
+        <mat-form-field class="example-full-width">
+          <input matInput  formControlName="name">
+        </mat-form-field>
+
+        Keywords:
+        <mat-form-field class="example-full-width">
+            <input matInput formControlName="keywords" [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of options" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+
+        Bid amount:
+        <mat-form-field class="example-full-width">
+            <input matInput  formControlName="bidAmount" type="number">
+        </mat-form-field>
+
+        Fund:
+        <mat-form-field class="example-full-width">
+            <input matInput  formControlName="fund" type="number">
+        </mat-form-field>
+
+        Status:
+        <mat-form-field class="example-full-width">
+            <mat-select matInput formControlName="status">
+                <mat-option value="On">On</mat-option>
+                <mat-option value="Off">Off</mat-option>                      
+                </mat-select>
+        </mat-form-field>
+
+        Town:
+        <mat-form-field class="example-full-width">
+            <mat-select formControlName="town">
+                <mat-option *ngFor="let town of towns" [value]="town">
+                    {{town}}
+                </mat-option>
+             </mat-select>
+        </mat-form-field>
+
+        Radius:
+        <mat-form-field class="example-full-width">
+            <input matInput  formControlName="radius" type="number">
+        </mat-form-field>
+
+        <div class="button-row">
+            <button type="submit" [disabled]="!campaignForm.valid" mat-flat-button color="primary"><mat-icon>save</mat-icon></button>
+        </div>
+
+      </form>
+    </mat-card>
+  </div>
